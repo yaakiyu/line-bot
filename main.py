@@ -33,7 +33,7 @@ async def main(request: Request):
         line_message = event.message.text
 
         # LINE メッセージの送信
-        line_bot_api.push_message(line_user_id, line_message)
+        line_bot_api.push_message(line_user_id, TextSendMessage(line_message))
 
     # LINE Webhook サーバーへ HTTP レスポンスを返す
     return 'ok'
