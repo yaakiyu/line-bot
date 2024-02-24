@@ -37,3 +37,8 @@ async def main(request: Request):
 
     # LINE Webhook サーバーへ HTTP レスポンスを返す
     return 'ok'
+
+@app.get("/")
+async def mainget(*args, **kwargs):
+    return "ok"
+
